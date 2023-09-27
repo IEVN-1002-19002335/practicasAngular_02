@@ -1,0 +1,24 @@
+<h1>Conversor de Temperaturas</h1>
+<br>
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="celsius" class="form-label">Convertir de Celsius a Fahrenheit:</label>
+            <input type="radio" id="celsius" name="conversionType" [(ngModel)]="conversionType" value="celsius">
+        </div>
+        <div class="mb-3">
+            <label for="fahrenheit" class="form-label">Convertir de Fahrenheit a Celsius:</label>
+            <input type="radio" id="fahrenheit" name="conversionType" [(ngModel)]="conversionType" value="fahrenheit">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Temperatura:</label>
+            <input type="number" class="form-control" [(ngModel)]="temperatura" name="temperatura" placeholder="Ingrese temperatura">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" (click)="calcular()">Calcular</button>
+        </div>
+    </div>
+    <div class="col-6">
+        <h2>Resultado es: {{ resultado }}</h2>
+    </div>
+</div>
