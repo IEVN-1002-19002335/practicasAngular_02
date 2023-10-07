@@ -8,6 +8,7 @@ import { MultiplicionComponent } from './multiplicion/multiplicion.component';
 import { MenuComponent } from './menu/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material/material.module';
+import { CinepolisComponent } from './cinepolis/cinepolis.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MaterialModule } from './material/material/material.module';
     TemperaturaComponent,
     MultiplicionComponent,
     MenuComponent,
+    CinepolisComponent,
   ],
   imports: [
     BrowserModule,

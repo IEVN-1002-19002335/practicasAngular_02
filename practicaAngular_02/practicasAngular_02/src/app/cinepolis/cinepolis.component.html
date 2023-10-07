@@ -1,0 +1,57 @@
+<br>
+<div class="row titulo">
+  <img src="../../assets/logo-cinepolis.png" alt="" class="logo">
+</div>
+<br>
+<div class="row">
+    <div class="col-5 caja1">
+      <h1 class="titulo">Entradas</h1>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre: </label>
+        <input type="text" class="form-control" [(ngModel)]="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="compradores" class="form-label">Cantidad de compradores: </label>
+        <input type="number" class="form-control" [(ngModel)]="cantidadCompradores">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tarjeta cineco: </label><br>
+        <input type="radio" name="tarjetaCineco" [(ngModel)]="tarjetaCineco" value="si" >
+        <label class="radiosi" for="si"> Si </label>
+      </div>
+      <div class="mb-3">
+        <input type="radio" name="tarjetaCineco" [(ngModel)]="tarjetaCineco" value="no" >
+        <label for="no"> No </label>
+      </div>      
+      <div class="mb-3">
+        <label for="cantidad" class="form-label">Cantidad de boletos: </label>
+        <input type="number" class="form-control" [(ngModel)]="cantidadBoletos">
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5 caja2">
+      <h1 class="titulo">Salidas</h1>
+      <div class="mb-3">
+        <h1 class="titulo">Precio por boleto: $12.000</h1> <br>
+        <label for="num2" class="form-label">Querida(o) {{nombre}} su valor a pagar es de: </label>
+        <input type="text" class="form-control" [(ngModel)]="totalPagar" disabled>
+        <span *ngIf="descuentosAplicados.length > 0">
+          Felicidades {{nombre}}!, recibiste los siguientes descuentos: 
+          <ul>
+            <li *ngFor="let descuento of descuentosAplicados">{{ descuento }}</li>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row contenedor2">
+    <div class="container">
+      <h1 class="titulo">Acciones</h1>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-secondary procesar btn-lg" (click)="calcularDescuento()">Procesar</button>
+        <button class="btn btn-danger btn-lg" (click)="salir()">Salir</button>
+      </div>
+    </div>
+  </div>
+  
