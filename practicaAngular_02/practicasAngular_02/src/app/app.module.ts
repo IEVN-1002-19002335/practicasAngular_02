@@ -9,6 +9,9 @@ import { MenuComponent } from './menu/menu/menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material/material.module';
 import { CinepolisComponent } from './cinepolis/cinepolis.component';
+import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing-module';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { CinepolisComponent } from './cinepolis/cinepolis.component';
     MultiplicionComponent,
     MenuComponent,
     CinepolisComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
